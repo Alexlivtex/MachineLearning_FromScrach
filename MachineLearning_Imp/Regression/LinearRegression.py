@@ -29,6 +29,7 @@ class LinearRegression(object):
         :param y_train : train target
         :return: None
         """
+        assert x_train.shape[0] == len(y_train)
         np.insert(x_train, 0, 1, axis=1)
         self.loss = []
         self.weigths_init(x_train.shape[1])
